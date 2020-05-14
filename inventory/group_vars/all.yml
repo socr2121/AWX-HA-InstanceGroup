@@ -1,10 +1,14 @@
 ---
+ansible_user: "vagrant"
+ansible_ssh_pass: "Test123"
+ansible_become_pass: "{{ansible_ssh_pass}}"
+
 ### AWX Default Settings
 awx_unique_secret_key: awxsecret
 awx_admin_default_pass: password
 
 ### Postgre DB details
-pg_db_host: "Database_Node_IP"
+pg_db_host: "192.168.1.285"
 pg_db_pass: "awxpass"
 pg_db_port: "5432"
 pg_db_user: "awx"

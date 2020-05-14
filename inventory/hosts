@@ -1,9 +1,7 @@
 [all]
 
 [awx_instance_group_web]
-Primary_Node_A
-Primary_Node_B
-
+192.168.1.280
 [awx_instance_group_task]
-Primary_Node_C
-Primary_Node_D
+192.168.1.281
+192.168.1.282

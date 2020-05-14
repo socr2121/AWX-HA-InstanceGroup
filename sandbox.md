@@ -11,11 +11,11 @@
 [all]
 
 [awx_instance_group_web]
-10.10.10.21
-10.10.10.22
+10.20.10.21
+10.20.10.22
 
 [awx_instance_group_task]
-10.10.10.23
+10.20.10.23
 ```
 2. [inventory/group_vars/all.yml](./inventory/group_vars/all.yml)
 ```yaml
@@ -29,7 +29,7 @@ awx_unique_secret_key: awxsecret
 awx_admin_default_pass: password
 
 ### Postgre DB details
-pg_db_host: "10.10.10.20"
+pg_db_host: "10.20.10.20"
 pg_db_pass: "awxpass"
 pg_db_port: "5432"
 pg_db_user: "awx"
@@ -48,7 +48,7 @@ $ cd AWX-HA-InstanceGroup/
 
 $ vagrant up;ansible-playbook -i inventory/hosts awx_ha.yml --verbose
 ```
-Once the command has succeded, it will bring the sandbox environment with HA mode and the same can access via either http://10.10.10.21 / http://10.10.10.22
+Once the command has succeded, it will bring the sandbox environment with HA mode and the same can access via either http://10.20.10.21 / http://10.20.10.22
 
 Once you are done with sandbox environment, you could destroy those via,
 ```bash
